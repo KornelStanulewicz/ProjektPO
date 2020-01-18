@@ -13,7 +13,7 @@ namespace Garderoba
             Hero jackek = new Hero(100,50,20,10,15);
             item miecz = new item("Miecz Zajebistego Projektu", 100, 0, 0, 0.06, 2);
             jackek.Załuż_Item(miecz, jackek.ekwipunek.Głowa);
-            Console.WriteLine($"Bohater założył {miecz}");
+            Console.WriteLine($"Bohater założył {miecz.nazwa}");
             Console.ReadKey();
         }
     }
