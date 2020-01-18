@@ -31,11 +31,11 @@ namespace Garderoba
                 statystyki.SpellPower += item.statystyki.SpellPower;
                 statystyki.CritCanse += item.statystyki.CritCanse;
             }
-            statystyki.Atack *= 1 + statystyki.Siła / 100;
-            statystyki.SpellPower *= 1 + statystyki.Inteligencja / 100;
-            statystyki.CritCanse *= 1 + statystyki.Zręcznoś / 100;
+            statystyki.Atack *= 2 + statystyki.Siła;
+            statystyki.SpellPower *= 2 + statystyki.Inteligencja / 100;
+            statystyki.CritCanse *= 2 + statystyki.Zręcznoś / 100;
         }
-        public void Załuż_Item(item Item,Slot slot)
+        public void Załuż_Item(Item Item,Slot slot)
         {
             if (slot.item==null)
             {
@@ -49,6 +49,12 @@ namespace Garderoba
             slot.item = null;
 
             ObliczStatystyki();
+        }
+
+        public void GetStats()
+        {
+            Console.WriteLine("Punkty Zdrowia: " + statystyki.HP + " Magia: " + statystyki.MP 
+                + " Siła: " + statystyki.Siła + " Zręczność: " + statystyki.Zręcznoś + " Inteligencja: " + statystyki.Inteligencja);
         }
     }
 }

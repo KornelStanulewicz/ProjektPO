@@ -8,7 +8,7 @@ namespace Garderoba
 {
     public class Slot
     {
-        public item item;
+        public Item item;
 
         public Slot()
         {

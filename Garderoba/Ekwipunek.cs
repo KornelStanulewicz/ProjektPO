@@ -27,10 +27,10 @@ namespace Garderoba
             Specjaly = new Slot();
         }
 
-        public List<item> Zwróć_Założony_Ekwipunek()
+        public List<Item> Zwróć_Założony_Ekwipunek()
         {
-            List <item>lista= new List<item>();
-            List<item> tmp = new List<item>();
+            List <Item>lista= new List<Item>();
+            List<Item> tmp = new List<Item>();
             lista.Add(Głowa.item);
             lista.Add(Tłów.item);
             lista.Add(Ramiona.item);

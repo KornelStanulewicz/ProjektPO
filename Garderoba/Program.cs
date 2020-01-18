@@ -11,9 +11,11 @@ namespace Garderoba
         static void Main(string[] args)
         {
             Hero jackek = new Hero(100,50,20,10,15);
-            item miecz = new item("Miecz Zajebistego Projektu", 100, 0, 0, 0.06, 2);
+            Item miecz = new Item("Hełm Zajebistego Projektu", 100, 10, 10, 10, 10);
             jackek.Załuż_Item(miecz, jackek.ekwipunek.Głowa);
             Console.WriteLine($"Bohater założył {miecz.nazwa}");
+            Console.WriteLine($"Statystyki bohatera: ");
+            jackek.GetStats();
             Console.ReadKey();
         }
     }
