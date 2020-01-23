@@ -8,53 +8,58 @@ namespace Garderoba
 {
     class Hero
     {
-        public Ekwipunek ekwipunek;
-        public Statystyki statystyki;
+        public Equipment equipment;
+        public Stats stats;
 
-        public Hero(int hP, int mP, int siła, int zręcznoś, int inteligencja)
+        public Hero(int hP, int mP, int strenght, int agility)
         {
-            this.ekwipunek = new Ekwipunek();
-            this.statystyki = new Statystyki(hP,mP,siła,zręcznoś,inteligencja);
+            this.equipment = new Equipment();
+            this.stats = new Stats(hP,mP,strenght,agility);
         }
 
-        public void ObliczStatystyki()
+        public void CalculateStats()
         {
 
-            statystyki.Armor = 0;
-            statystyki.Atack = 0;
-            statystyki.SpellPower = 0;
-            statystyki.CritCanse = 0;
-            foreach (var item in ekwipunek.Zwróć_Założony_Ekwipunek())
+            stats.Armor = 0;
+            stats.Attack = 0;
+            stats.SpellPower = 0;
+            stats.HitChance = 0;
+            foreach (var item in equipment.Return_Your_Eq())
             {
-                statystyki.Armor += item.statystyki.Armor;
-                statystyki.Atack += item.statystyki.Atack;
-                statystyki.SpellPower += item.statystyki.SpellPower;
-                statystyki.CritCanse += item.statystyki.CritCanse;
+                stats.Armor += item.stats.Armor;
+                stats.Attack += item.stats.Attack;
+                stats.SpellPower += item.stats.SpellPower;
+                stats.HitChance += item.stats.HitChance;
             }
-            statystyki.Atack *= 2 + statystyki.Siła;
-            statystyki.SpellPower *= 2 + statystyki.Inteligencja / 100;
-            statystyki.CritCanse *= 2 + statystyki.Zręcznoś / 100;
+            stats.Attack *= 1 + stats.Strenght / 100;
+            stats.SpellPower *= 1 + stats.MP / 100;
+            stats.HitChance *= 1 + stats.Agility / 100;
+            stats.Armor *= 1 + stats.HP / 100;
         }
-        public void Załuż_Item(Item Item,Slot slot)
+        public void PutOn(Item Item,Slot slot)
         {
             if (slot.item==null)
             {
                 slot.item = Item;
-                ObliczStatystyki();
+                Console.WriteLine(Item.ToString());
+                this.equipment.Head.item = Item;
+                Console.WriteLine(this.equipment.ToString());
+                CalculateStats();
             }
 
         }
-        public void Zdejmij_Item(Slot slot)
+        public void RemoveItem(Slot slot)
         {
             slot.item = null;
 
-            ObliczStatystyki();
+            CalculateStats();
         }
 
         public void GetStats()
         {
-            Console.WriteLine("Punkty Zdrowia: " + statystyki.HP + " Magia: " + statystyki.MP 
-                + " Siła: " + statystyki.Siła + " Zręczność: " + statystyki.Zręcznoś + " Inteligencja: " + statystyki.Inteligencja);
+            Console.WriteLine($"Statystyki bohatera: ");
+            Console.WriteLine("Punkty Zdrowia: " + stats.HP + " Magia: " + stats.MP 
+                + " Siła: " + stats.Strenght + " Zręczność: " + stats.Agility);
         }
     }
 }

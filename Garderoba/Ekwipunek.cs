@@ -6,47 +6,56 @@ using System.Threading.Tasks;
 
 namespace Garderoba
 {
-    class Ekwipunek
+    class Equipment
     {
-        public Slot Głowa;
-        public Slot Tłów;
-        public Slot Ramiona;
-        public Slot Ręce;
-        public Slot Nogi;
-        public Slot Stopy;
-        public Slot Specjaly;
+        public Slot Head;
+        public Slot Chest;
+        public Slot Shoulders;
+        public Slot Hands;
+        public Slot Legs;
+        public Slot Feet;
+        public Slot Finger;
 
-        public Ekwipunek()
+        public Equipment()
         {
-            Głowa = new Slot();
-            Tłów = new Slot();
-            Ramiona = new Slot();
-            Ręce = new Slot();
-            Nogi = new Slot();
-            Stopy = new Slot();
-            Specjaly = new Slot();
+            Head = new Slot();
+            Chest = new Slot();
+            Shoulders = new Slot();
+            Hands = new Slot();
+            Legs = new Slot();
+            Feet = new Slot();
+            Finger = new Slot();
         }
 
-        public List<Item> Zwróć_Założony_Ekwipunek()
+        public List<Item> Return_Your_Eq()
         {
-            List <Item>lista= new List<Item>();
+            List <Item>list= new List<Item>();
             List<Item> tmp = new List<Item>();
-            lista.Add(Głowa.item);
-            lista.Add(Tłów.item);
-            lista.Add(Ramiona.item);
-            lista.Add(Ręce.item);
-            lista.Add(Nogi.item);
-            lista.Add(Stopy.item);
-            lista.Add(Specjaly.item);
+            list.Add(Head.item);
+            list.Add(Chest.item);
+            list.Add(Shoulders.item);
+            list.Add(Hands.item);
+            list.Add(Legs.item);
+            list.Add(Feet.item);
+            list.Add(Finger.item);
             //wywalanie nulli
-            for (int i = 0; i < lista.Count; i++)
+            for (int i = 0; i < list.Count; i++)
             {
-                if (lista[i]!=null)
+                if (list[i]!=null)
                 {
-                    tmp.Add(lista[i]);
+                    tmp.Add(list[i]);
                 }
             }
             return tmp;
+        }
+        public override string ToString()
+        {
+            string result = String.Empty;
+            foreach(var e in this.Return_Your_Eq())
+            {
+                result += e.name + "\n";
+            }
+            return result == String.Empty ? "PUSTO" : result;
         }
     }
 }
