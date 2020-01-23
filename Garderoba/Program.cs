@@ -10,12 +10,16 @@ namespace Garderoba
     {
         static void Main(string[] args)
         {
-            Hero jackek = new Hero(100,50,20,10,15);
-            Item miecz = new Item("Hełm Zajebistego Projektu", 100, 10, 10, 10, 10);
-            jackek.Załuż_Item(miecz, jackek.ekwipunek.Głowa);
-            Console.WriteLine($"Bohater założył {miecz.nazwa}");
-            Console.WriteLine($"Statystyki bohatera: ");
-            jackek.GetStats();
+            Hero Anduin = new Hero(100,50,20,10);
+            //Item chelm = new Item("Hełm Zajebistego Projektu", 10, 10, 10, 10);
+            Item hands = new Item("Rękawice Zniszczenia", 100, 100, 100, 100);
+            Anduin.PutOn(hands, Anduin.equipment.Hands);
+            //jackek.PutOn(chelm, jackek.equipment.Head);
+            Console.WriteLine(Anduin.equipment.ToString());
+            //Console.WriteLine($"Bohater założył {chelm.nazwa}");
+            Anduin.CalculateStats();
+            Anduin.GetStats();
+
             Console.ReadKey();
         }
     }

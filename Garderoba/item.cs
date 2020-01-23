@@ -8,17 +8,20 @@ namespace Garderoba
 {
     public class Item
     {
-       public string nazwa;
-       public double wartość;
-       public Statystyki statystyki = new Statystyki();
-        public Item(string nazwa, double wartość,int armor,int spell,double crit,int attack)
+       public string name;
+       public Stats stats = new Stats();
+        public Item(string name, int armor, int spell, int hit, int attack)
         {
-            this.nazwa = nazwa;
-            this.wartość = wartość;
-            statystyki.Armor = armor;
-            statystyki.SpellPower = spell;
-            statystyki.CritCanse = crit;
-            statystyki.Atack = attack;
+            this.name = name;
+            stats.Armor = armor;
+            stats.SpellPower = spell;
+            stats.HitChance = hit;
+            stats.Attack = attack;
         }
+        public override string ToString()
+        {
+            return $"{this.name}| {this.stats.Armor.ToString()}";
+        }
+
     }
 }

@@ -6,28 +6,26 @@ using System.Threading.Tasks;
 
 namespace Garderoba
 {
-    public class Statystyki
+    public class Stats
     {
         public int HP;
         public int MP;
-        public int Siła;
-        public int Zręcznoś;
-        public int Inteligencja;
+        public int Strenght;
+        public int Agility;
 
-        public int Atack;
+        public int Attack;
         public int SpellPower;
-        public double CritCanse;
+        public int HitChance;
         public int Armor;
 
-        public Statystyki(int hP, int mP, int siła, int zręcznoś, int inteligencja)
+        public Stats(int hP, int mP, int strenght, int agility)
         {
             HP = hP;
             MP = mP;
-            Siła = siła;
-            Zręcznoś = zręcznoś;
-            Inteligencja = inteligencja;
+            Strenght = strenght;
+            Agility = agility;
         }
-        public Statystyki()
+        public Stats()
         {
 
         }
