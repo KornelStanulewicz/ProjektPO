@@ -10,15 +10,32 @@ namespace Garderoba
     {
         static void Main(string[] args)
         {
-            Hero Anduin = new Hero(100,50,20,10);
-            //Item chelm = new Item("Hełm Zajebistego Projektu", 10, 10, 10, 10);
-            Item hands = new Item("Rękawice Zniszczenia", 100, 100, 100, 100);
-            Anduin.PutOn(hands, Anduin.equipment.Hands);
-            //jackek.PutOn(chelm, jackek.equipment.Head);
-            Console.WriteLine(Anduin.equipment.ToString());
-            //Console.WriteLine($"Bohater założył {chelm.nazwa}");
+            // wyrzucic puste interfejsy i dziedzieczenie z klas
+            // potestować
+            // dodać więcej przypadków
+            // lepsze formatowanie wyswietlania
+            Hero Anduin = new Hero("Anduin", 100,50,20,10);
+            Item helm = new Item("Hełm Zajebistego Projektu", 11, 0, 10, 10);
+            Item rozdzka = new Item("Rozdzka", 0, 100, 20, 0);
+
+            Anduin.Equipment.AddToEquipmentDict("Head", helm);
+            Anduin.Equipment.DisplayEquipment();
+
             Anduin.CalculateStats();
             Anduin.GetStats();
+
+            Anduin.Equipment.AddToEquipmentDict("Hands", rozdzka);
+            Anduin.Equipment.DisplayEquipment();
+            Anduin.CalculateStats();
+            Anduin.GetStats();
+
+            Anduin.Equipment.RemoveFromEquipmentDict("Head");
+            Anduin.Equipment.DisplayEquipment();
+
+            Anduin.CalculateStats();
+            Anduin.GetStats();
+
+
 
             Console.ReadKey();
         }
