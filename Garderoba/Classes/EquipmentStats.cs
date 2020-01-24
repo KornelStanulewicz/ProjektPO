@@ -31,7 +31,8 @@ namespace Garderoba.Classes
 
         public override void DisplayStats()
         {
-            Console.WriteLine($"Pancerz: {this.Armor}, Spellpower: {this.SpellPower}, Hitchance: {this.HitChance}, Attack: {this.Attack}");
+            Console.WriteLine($"Pancerz: {this.Armor}, Siła czarów: {this.SpellPower}, " +
+                $"Szansa na uderzenie: {this.HitChance}, Atak: {this.Attack}");
         }
     }
 }

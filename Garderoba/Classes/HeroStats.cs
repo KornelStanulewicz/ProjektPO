@@ -25,7 +25,8 @@ namespace Garderoba.Classes
         }
         public override void DisplayStats()
         {
-            Console.WriteLine($"HP: {this.HP}, MP: {this.MP}, sila: {this.Strength}, zrecznosc: {this.Agility}");
+            Console.WriteLine($"Punkty Zdrowia: {this.HP}, Magia: {this.MP}, " +
+                $"Siła: {this.Strength}, Zręczność: {this.Agility}");
         }
 
         

@@ -40,8 +40,10 @@ namespace Garderoba
 
         public void GetStats()
         {
+            Console.WriteLine("Statystyki bohatera: ");
             HeroStats.DisplayStats();
             HeroStats.EquipmentStats.DisplayStats();
+            Console.WriteLine("\n");
         }
     }
 }

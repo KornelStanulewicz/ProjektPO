@@ -39,7 +39,7 @@ namespace Garderoba
         
         public void DisplayEquipment()
         {
-            Console.WriteLine("===== EQUIPMENT =====");
+            Console.WriteLine("===== GARDEROBA SYSTEMU RPG =====\n");
             foreach (var item in this.Items)
             {
                 Console.WriteLine(item.Key);
@@ -50,6 +50,7 @@ namespace Garderoba
                 else
                     Console.WriteLine("Brak przedmiotu.");
             }
+            Console.WriteLine("\n");
         }
 
     }

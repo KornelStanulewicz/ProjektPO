@@ -19,7 +19,8 @@ namespace Garderoba
         }
         public override string ToString()
         {
-            return $"{this.Name} | Pancerz: {this.Stats.Armor.ToString()}, Spellpower: {this.Stats.SpellPower.ToString()}, Hitchance: {this.Stats.HitChance.ToString()}, Attack: {this.Stats.Attack.ToString()}";
+            return $"{this.Name} | Pancerz: {this.Stats.Armor.ToString()}, Siła czarów: {this.Stats.SpellPower.ToString()}" +
+                $", Szansa na uderzenie: {this.Stats.HitChance.ToString()}, Atak: {this.Stats.Attack.ToString()}";
         }
 
     }
