@@ -19,7 +19,6 @@ namespace Garderoba
 
         private void InitizalizeDictionary()
         {
-            // ewentualnie zamiana kluczy na male litery -> head itd
             this.Items.Add("Head", null);
             this.Items.Add("Chest", null);
             this.Items.Add("Hands", null);
@@ -35,7 +34,6 @@ namespace Garderoba
 
         public void RemoveFromEquipmentDict(string key)
         {
-            // key = key.toLower()
             this.Items[key] = null;
         }
         

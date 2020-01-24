@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Garderoba
 {
-    public class Item : IItem
+    public class Item
     {
        public string Name { get; set; }
        public EquipmentStats Stats { get; set; }

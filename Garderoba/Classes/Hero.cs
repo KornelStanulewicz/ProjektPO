@@ -35,7 +35,6 @@ namespace Garderoba
                     HeroStats.EquipmentStats.HitChance += item.Value.Stats.HitChance;
                 }
             }
-            // jak chcesz sie pobawic z formula liczenia to sie pobaw
             
         }
 

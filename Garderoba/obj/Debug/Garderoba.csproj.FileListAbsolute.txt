@@ -10,3 +10,9 @@ C:\Users\MARCIN\Desktop\ProjektPO-Fixes\Garderoba\bin\Debug\Garderoba.pdb
 C:\Users\MARCIN\Desktop\ProjektPO-Fixes\Garderoba\obj\Debug\Garderoba.csprojAssemblyReference.cache
 C:\Users\MARCIN\Desktop\ProjektPO-Fixes\Garderoba\obj\Debug\Garderoba.exe
 C:\Users\MARCIN\Desktop\ProjektPO-Fixes\Garderoba\obj\Debug\Garderoba.pdb
+C:\Users\TOSIA\Documents\GitHub\ProjektPO\Garderoba\bin\Debug\Garderoba.exe.config
+C:\Users\TOSIA\Documents\GitHub\ProjektPO\Garderoba\bin\Debug\Garderoba.exe
+C:\Users\TOSIA\Documents\GitHub\ProjektPO\Garderoba\bin\Debug\Garderoba.pdb
+C:\Users\TOSIA\Documents\GitHub\ProjektPO\Garderoba\obj\Debug\Garderoba.csprojAssemblyReference.cache
+C:\Users\TOSIA\Documents\GitHub\ProjektPO\Garderoba\obj\Debug\Garderoba.exe
+C:\Users\TOSIA\Documents\GitHub\ProjektPO\Garderoba\obj\Debug\Garderoba.pdb

@@ -15,7 +15,6 @@ namespace Garderoba.Classes
         public int Agility { get; set; }
 
         public EquipmentStats EquipmentStats { get; set; }
-        // pokminić - hero staty ma jeszce equipment staty
         public HeroStats(int hp, int mp, int strength, int agility)
         {
             this.HP = hp;
