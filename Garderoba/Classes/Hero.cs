@@ -35,7 +35,6 @@ namespace Garderoba
                     HeroStats.EquipmentStats.HitChance += item.Value.Stats.HitChance;
                 }
             }
-            
         }
 
         public void GetStats()
